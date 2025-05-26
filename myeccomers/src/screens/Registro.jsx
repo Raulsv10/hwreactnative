@@ -1,4 +1,3 @@
-import { err } from "react-native-svg";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {
   VStack,
@@ -9,7 +8,7 @@ import {
   Pressable,
   Image,
 } from "@gluestack-ui/themed";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ref, set } from "firebase/database";
 import { Camera } from "expo-camera";
 import * as Location from "expo-location";

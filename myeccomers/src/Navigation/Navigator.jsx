@@ -1,20 +1,22 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../screens/Login";
-import Home from "../screens/Home";
 import Registro from "../screens/Registro";
+import Home from "../screens/Home";
+import ProductDetailScreen from "../screens/ProductDetailScreen.jsx";
 
-const stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function Navigator() {
   return (
-    <stack.Navigator
+    <Stack.Navigator
       initialRouteName="Login"
       screenOptions={{ headerShown: false }}
     >
-      <stack.Screen name="Login" component={Login} />
-      <stack.Screen name="Registro" component={Registro} />
-      <stack.Screen name="Home" component={Home} />
-    </stack.Navigator>
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Registro" component={Registro} />
+      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
+    </Stack.Navigator>
   );
 }

@@ -1,5 +1,6 @@
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { VStack, Input, Button, Text, Center } from "@gluestack-ui/themed";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { autenticacion } from "../firebase/fiirebaseConf";
 
 export default function Login({ navigation }) {
@@ -19,7 +20,7 @@ export default function Login({ navigation }) {
   return (
     <Center flex={1} px="$4">
       <VStack space="lg" width="100%">
-        <Text size="xl" bold textAling="center">
+        <Text size="xl" bold textAlign="center">
           {" "}
           Iniciar Sesión
         </Text>

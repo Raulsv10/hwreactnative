@@ -9,10 +9,15 @@
     "web": "DARK_MODE=media expo start --web"
   },
   "dependencies": {
+    "@gluestack-style/react": "^1.0.46",
+    "@gluestack-ui/config": "^1.1.10",
     "@gluestack-ui/icon": "^0.1.27",
     "@gluestack-ui/nativewind-utils": "^1.0.26",
     "@gluestack-ui/overlay": "^0.1.22",
+    "@gluestack-ui/themed": "^1.1.61",
     "@gluestack-ui/toast": "^1.0.9",
+    "@react-native-async-storage/async-storage": "^2.1.2",
+    "@react-native-firebase/auth": "^22.2.0",
     "@react-navigation/native": "^7.1.9",
     "@react-navigation/native-stack": "^7.3.13",
     "@reduxjs/toolkit": "^2.8.2",
@@ -35,8 +40,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "jscodeshift": "^0.15.2",
-    "@types/react": "~19.0.10"
+    "@types/react": "~19.0.10",
+    "jscodeshift": "^0.15.2"
   },
   "private": true
 }
