@@ -15,7 +15,7 @@
     "@reduxjs/toolkit": "^2.8.2",
     "expo": "~53.0.9",
     "expo-camera": "^16.1.6",
-    "expo-location": "^18.1.5",
+    "expo-location": "~18.1.5",
     "expo-sqlite": "~15.2.10",
     "expo-status-bar": "~2.2.3",
     "firebase": "^11.8.1",

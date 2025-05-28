@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import LoginScreen from "./src/screens/LoginScreen";
 import RegisterScreen from "./src/screens/RegisterScreen";
 import HomeScreen from "./src/screens/HomeScreen";
@@ -9,6 +9,7 @@ import ItemListScreen from "./src/screens/ItemListScreen";
 import ItemDetailScreen from "./src/screens/ItemDetailScreen";
 import CartScreen from "./src/screens/CartScreen";
 import FinalizarPedidoScreen from "./src/screens/FinalizarPedidoScreen";
+import ProfileScreen from "./src/screens/ProfileScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -18,12 +19,20 @@ export default function App() {
       <Stack.Navigator
         screenOptions={({ navigation }) => ({
           headerRight: () => (
-            <TouchableOpacity
-              style={{ marginRight: 15 }}
-              onPress={() => navigation.navigate("Cart")}
-            >
-              <Ionicons name="cart-outline" size={24} color="#000" />
-            </TouchableOpacity>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <TouchableOpacity
+                style={{ marginRight: 15 }}
+                onPress={() => navigation.navigate("Cart")}
+              >
+                <Ionicons name="cart-outline" size={24} color="#000" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={{ marginRight: 15 }}
+                onPress={() => navigation.navigate("Profile")}
+              >
+                <Ionicons name="person-outline" size={24} color="#000" />
+              </TouchableOpacity>
+            </View>
           ),
         })}
       >
@@ -42,6 +51,7 @@ export default function App() {
           component={FinalizarPedidoScreen}
           options={{ title: "Finalizar Pedido" }}
         />
+        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

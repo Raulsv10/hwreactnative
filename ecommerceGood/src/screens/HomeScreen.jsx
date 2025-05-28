@@ -8,6 +8,7 @@ import {
   StyleSheet,
   ActivityIndicator,
   TouchableOpacity,
+  Button,
 } from "react-native";
 import { ref, onValue } from "firebase/database";
 import { db } from "../firebase/config";
@@ -41,7 +42,10 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Categorías</Text>
-
+      <Button
+        title="Ver mi perfil"
+        onPress={() => navigation.navigate("Profile")}
+      />
       {loading ? (
         <ActivityIndicator size="large" color="#000" />
       ) : (
